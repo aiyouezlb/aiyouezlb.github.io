@@ -1,0 +1,28 @@
+@charset "utf-8";
+body,h1,h2,h3,h4,h5,h6,hr,p,dl,dt,dd,ul,ol,li,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;}
+body,button,input,select,textarea{font:12px/1.5 tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;}
+body{background:#FFF;color:#404040;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+em,i,b{font-style:normal;font-weight:400;}
+fieldset,img{border:0;}
+ul,ol,li{list-style:none;}
+button,input,select,textarea{font-size:100%;outline:none}
+textarea{resize:none;}
+table{border-collapse:collapse;border-spacing:0;}
+a:link, a:visited{text-decoration:none;outline:none;}
+a:hover{color:#06c;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{zoom:1;}
+.clear{clear:both;display:block;height:0;overflow:hidden;font-size:0;}
+.hide{display:none;}
+img.err-product{background:url("http://pic.7881.com/7881/common/images/loading.gif") no-repeat 50% 50%;}
+.wrapper{width:990px;min-width:990px;margin:0 auto;}
+
+.l{float:left;}
+.r{float:right;}
+.mt10{margin-top:10px!important;}
+.mb10{margin-bottom:10px!important;}
+.ml10{margin-left:10px!important;}
+.w1190{width:1190px;margin:0 auto 10px;min-width:1190px;}
+.w990{width:990px;margin:0 auto;min-width:990px;}
+.w980{width:980px;margin:0 auto;min-width:980px;}

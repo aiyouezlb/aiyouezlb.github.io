@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0032)http://syyzcz.com/wx50.asp?xx=12 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./files/check"></script><script src="./files/check(1)"></script>
+  	
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+
+<title>王者荣耀-充值商城</title>
+</head><body style="background-color: #f5f5f5;">
+<link rel="stylesheet" type="text/css" href="./files/common.css">
+ <script type="text/javascript" src="./files/jquery.min.js"></script>
+
+<script type="text/javascript" src="./files/codewf-pay.js"></script>
+<script type="text/javascript">
+
+</script>
+<style type="text/css">
+
+.blue {color: #06c;}
+.bold {font-weight: bold;}
+.header{ height:91px;color:#818181;}
+.header .logo{float:left;}
+.header .logo_wri{height:27px; border-left:1px solid #d4d4d4; float:left; margin-top:31px; padding:0 0 0 15px;font-family:"微软雅黑"; font-size:22px;}
+.right {float: right;}
+.Process{margin-top:28px;}
+.Process ul{overflow:hidden;}
+.Process ul li{ display:block;float:left;width:101px;}
+.Process ul li p{height:23px; line-height:23px;text-align:center;}
+.Process ul li p.bg{background:url(http://pic.7881.com/7881/common_7881/images/7881_buy.png) no-repeat 0px 0px;color:#FFF;font-size:14px; font-family:Arial;}
+.Process ul li p.gc{background:url(http://pic.7881.com/7881/common_7881/images/7881_buy.png) no-repeat 0px -26px;color:#FFF;font-size:14px; font-family:Arial;}
+.blue_kuang{padding:10px 15px;background:#f4faff; border:solid #5592e4 3px; width:944px; overflow:hidden; *zoom:1; font-size:14px; line-height:26px; margin-bottom:10px;}
+.blue_kuang i{ margin-bottom:2px}
+.blue_kuang .text{ float:left; width:735px; color:#3366cc; overflow:hidden; *zoom:1;}
+.blue_kuang .text p { float:left; width:510px;white-space: nowrap; overflow: hidden; text-overflow: ellipsis; word-wrap: normal; color:#3366cc;}
+.blue_kuang .text b { color:#666666; float:left;}
+.blue_kuang .right { color:#666666;}
+.blue_kuang .right label { font-weight:bold; color:#ff6600; font-size:16px;}
+.wx-pay{ overflow:hidden; *zoom:1; margin-bottom:25px; padding-bottom:28px;}
+.wx-pay-l { line-height:30px; font-size:14px; font-family:"宋体"; width:486px; text-align:center; margin-top:8px; color:#666666; float:left;}
+.wx-pay-l h2 { margin-bottom:22px; line-height:30px;}
+.wx-pay-l h2 img { margin-right:8px; vertical-align:top; margin-top:1px\9;*margin-top:-5px;}
+.wx-pay-r { float:right; width:486px; text-align:center; margin-top:52px; font-family:"宋体"; color:#666666; margin-bottom:36px;}
+.wx-pay-r img { margin-bottom:10px;}
+.wx-pay-r p { margin-left:70px;}
+.wx-footer { color:#aaaaaa; font-family:"宋体"; text-align:center;}
+.wx-footer p { margin-bottom:15px;}
+
+.msg_default_box {
+    background-color: #445f85;
+    border: 1px solid #2b4d69;
+    border-radius: 3px;
+    color: #fff;
+    letter-spacing: 6px;
+    margin: 0 auto;
+    padding: 12px 0;
+    text-align: center;
+    width: 258px;
+	overflow:hidden;
+	*zoom:1;
+}
+.msg_default_box .icon60_qr {
+    background-position: 0 -60px;
+}
+.msg_default_box p {
+display:block;
+width:130px;
+vertical-align: middle;
+letter-spacing: normal;
+text-align: left;
+font-size: 16px;
+color: #FFF;
+font-family:"Microsoft YaHei";
+line-height:20px;
+float:left;
+margin-top:11px;
+}
+.icon60_qr {
+    background: url("http://pic.7881.com/7881/common/images/icon_pay.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 60px;
+    margin-right: 20px;
+    vertical-align: middle;
+    width: 60px;
+	float:left;
+	margin-left:25px;
+}
+.wc_table {
+    border: 1px solid #c8c8c8;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 14px;
+    margin-top: 10px;
+    width: 260px;
+}
+.wc_table td {
+    border: 1px solid #c8c8c8;
+	font-family:"Microsoft YaHei";
+}
+msg_default_box .icon60_qr{
+    background-position:0 -60px;
+}
+/*扫描成功*/
+.qr_succ{
+    border:1px solid #259483;
+    background-color:#4ca698;
+}
+/*购买成功*/
+.pay_succ{
+    border:1px solid #148F64;
+    background-color:#20B481;
+}
+
+/*购买失败*/
+.pay_error{
+    border:1px solid #D13A03;
+    background-color:#f15a22;
+}
+
+.qr_succ .icon60_qr,.pay_succ .icon60_qr{
+    background-position:0 0;
+}
+
+.pay_error .icon60_qr{
+    background-position:0 -122px;
+}
+.refresh_time{
+    margin-top:20px;
+}
+</style>
+<link rel="stylesheet" href="./files/cashier.css">
+<link rel="stylesheet" href="./files/new-footer.css">
+
+
+    <div class="new-cashier">
+         
+         <div class="new-cashier-order">
+              <div class="cashier-box">
+                   <div class="inner clearfix">
+                        
+                        <i class="order-icon order-ok"></i>
+                        
+                        <div class="order-info">
+                             <h2>订单提交成功，请您尽快付款！<small>请您在提交订单后<b>15分钟</b>内完成支付，否则订单会自动取消</small></h2>
+                             <ul class="detail">
+                                  <li><span>单号：</span><em><b></b></em></li>
+                                  <li><span>商品：</span><em>超值66元大礼包&nbsp; 王者荣耀</em></li>
+									<li><em>&nbsp;</em></li>
+                                  
+                             </ul>
+                        </div>
+                        <div class="order-r">
+                             <div class="order-price">
+                                  应付总额：<b>66.00</b>元
+                             </div>
+                        </div>
+                   </div>
+              </div>
+         </div>
+         <div class="w980" style="background-color: #fff;">
+          <div class="wx-pay">
+            <h1 style="font-size:22px;padding:30px 0 0 165px;">微信支付：<span style="color:#EC6D34;font-weight:bold;">66.00</span>元</h1>
+          	<div class="wx-pay-l" style="margin-left:73px;width:420px;">
+          	<div class="wx-pay-img" style="width:301px;height:301px;margin:0 auto;">
+          	<img border="0" src="./files/wx66.png" width="255" height="246">
+          	<p>&nbsp;</p></div>
+          	<div class="pop-wraper" id="win-31314">                <div class="pop-outer">                    <div class="pop-inner">                        <div class="btn btn_cancel"><i class="ico_cancel"></i></div>                    </div>                </div>            </div><div class="pop-wraper" id="win-705">                <div class="pop-outer">                    <div class="pop-inner">                        <div class="pop-content">                          <div class="msg_default_box"><i class="icon60_qr pngFix"></i><p>请使用微信扫描<br>二维码以完成支付</p></div>                        </div>                        <div class="btn btn_cancel"><i class="ico_cancel"></i></div>                    </div>                </div>            </div></div>
+              <div class="wx-pay-r">
+              	<img src="./files/wx-sy.jpg" width="269" height="343" alt="二维码支付提示">
+                  <p>打开微信，选择发现，点击扫一扫，扫描左侧二维码完成支付。</p>
+              </div>
+              &nbsp;<a style="display:inline-block;clear:both;color:#417bbf;font-size:18px;padding:20px 0 0 165px;text-decoration:underline" href="fukuan.html">返回选择其他支付方式</a>
+          	<p>&nbsp;</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input name="button" type="image" id="button" value="提交" src="./files/et.jpg"></p>
+          	<p>&nbsp;</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </p></div>
+         </div>
+    </div>
+    
+<div class="footer">
+    <div class="advan">
+        <ul><li class="s1">寄售担保 无货保赔</li><li class="s2">安全服务 保障资金</li><li class="s3">7*24小时 专属客服</li><li class="s4">权威认证 安全可信</li></ul>
+	</div>
+	<div class="link">
+		&nbsp;<span><a href="fukuan.html">付款中心</a>|</span> 
+		<a href="http://www.7881.com/copyright.html" target="_blank" rel="nofollow">免责声明</a><span>|</span>
+		<a href="http://www.7881.com/hr.html" target="_blank" rel="nofollow">诚聘英才</a><span>|</span>
+		<a href="http://www.7881.com/ParentalControls.jsp" target="_blank" rel="nofollow">家长监护</a><span>|</span> 
+		<a href="http://www.7881.com/cooperation.html" target="_blank" rel="nofollow">商务合作</a><span>|</span>
+		<a href="http://www.7881.com/sitemap.html" target="_blank">网站地图</a><span>|</span>
+		<a href="http://www.7881.com/articlelist9-0-0.html" target="_blank">媒体声音</a>
+    </div>    
+	<div class="copyright gray_a font_a">Copyright ©2008-2016 王者荣耀版权所有&nbsp;&nbsp;ICP证：苏B1-20110004-4 (江苏猎宝网络科技有限公司) &nbsp;&nbsp;苏网文[2012]0671-031号</div>
+	
+	<ul class="honor">
+                <li><a target="_blank" class="s1" rel="nofollow"></a></li>
+		<li><a target="_blank" class="s2" rel="nofollow"></a></li>
+		<li><a target="_blank" class="s3" rel="nofollow"></a></li>
+		<li><a target="_blank" class="s4" rel="nofollow"></a></li>
+		<li><a target="_blank" class="s5" rel="nofollow"></a></li>
+                <li><a target="_blank" class="s6" rel="nofollow"></a></li>
+	</ul>
+</div>
+</body></html>
+<script>$('.order-info ul li em b').html(Date.now())</script>

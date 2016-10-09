@@ -1,1 +1,743 @@
-<h2>你好，坤蛋儿</h2>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0018)http://syyzcz.com/ -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<title>爱游二折礼包-手游官方授权充值平台</title>
+
+<link href="./files/7881.common.css" rel="stylesheet" type="text/css">
+<link href="./files/global.css" rel="stylesheet">
+<link href="./files/release.css" rel="stylesheet" type="text/css"> 
+
+<script type="text/javascript" src="./files/jquery1.5.js"></script>
+<script type="text/javascript" src="./files/jquery.validate.js"></script>
+<script type="text/javascript" src="./files/kefu.js"></script>
+<script type="text/javascript" src="./files/game_base_info.js"></script>
+<script type="text/javascript" src="./files/restrict_input.js"></script>
+<script src="./files/7881Ui.js"></script>
+
+
+<style type="text/css">
+.txcpdd ul li span {
+    width: 90px;
+}
+#dxk {
+	margin-left: 90px;
+}
+.tips{
+	float:left;
+	font-size: 12px;
+	margin-left: 195px;
+	clear: left;
+	margin-top: 5px;
+	width: 400px;
+	overflow: hidden;
+	line-height:18px;
+}
+	
+.pop { position:absolute; display:none; width:460px; background:#197ec0; z-index:1001; }
+.pop .title { position:relative; background:#197ec0; width:446px; height:30px; margin:3px 3px 0 3px; font-size:14px; color:#ffffff; line-height:26px; padding-left:8px; font-weight:bolder;}
+.pop .title b { display:block; right:8px; top:-3px; position:absolute; width:35px; height:32px; cursor:pointer; line-height:30px; text-align:center;}
+.pop .con { background:#ffffff; margin:0 3px 3px 3px; text-align:center; padding:28px 0;}
+.pop .con p { margin-bottom:10px;}
+.pop .con h5 { margin-top:25px;}
+.b-14 { color:#197ec0; font-size:14px;}
+.ora-18 { color:#ff6600; font-size:18px; font-family:"微软雅黑"}
+.btn-qw { display:inline-block; background:url(http://pic.7881.com/7881/common_7881/images/btn-bg-chb.png) no-repeat; width:136px; height:30px; text-align:center; font-size:14px; color:#ffffff; line-height:28px; font-weight:bolder; margin:0 5px;}
+.btn-qw:hover { text-decoration:none; color:#ffffff;}
+.btn-qt { display:inline-block; background:url(http://pic.7881.com/7881/common_7881/images/btn-bg-chb.png) 0 -30px no-repeat; width:136px; height:30px; text-align:center; font-size:12px; color:#666666; line-height:28px; margin:0 5px; font-weight:normal;}
+.btn-qt:hover { color:#666666; text-decoration:none;}
+.App_right ul li h6 { float:left; font-size:12px; font-weight:normal; width:400px;}
+	
+</style>
+<script type="text/javascript">
+function checkIsQQ(value){
+	var pattern=/^[0-9]\d{4,15}$/;
+	if (!pattern.test(value)) {
+		return false;
+	} else {
+		return true;
+	}
+}
+jQuery.validator.addMethod("isQQ", function(value, element) {
+	return this.optional(element) || checkIsQQ(value);
+});
+
+//手机号码
+function checkIsTel(value) {
+	var pattern = /^[1][1234567890]\d{9}$/;
+	if (!pattern.test(value)) {
+		return false;
+	} else {
+		return true;
+	}
+}
+//添加手机号码验证方法
+jQuery.validator.addMethod("isTel", function(value, element) {
+	return this.optional(element) || checkIsTel(value);
+});
+
+$(function(){
+		$.ajaxSetup({cache:false});//clear cache 
+		var validator = $("#goodsForm").validate({
+			rules : {
+				"yys" : {
+					required : true
+				},
+				"qu" : {
+					required : true
+				},
+				"fu" : {
+					required : true
+				},
+				"qu" : {
+					required : true
+				},
+				"arg1" : {
+					required : true
+				},
+				"arg2" : {
+					required : true
+				},
+				"buyerpassword1" : {
+					required : true,
+					equalTo : "#pas1"
+				},
+				"55" : {
+					required : true
+				},
+				"goodsPurchaseBean.phone" : {
+					required : true,
+					isTel : true
+				},
+				"goodsPurchaseBean.qq" : {
+					required : true,
+					isQQ : true
+				}
+			},
+			 messages : {
+			 		"yys" : {
+						required : '<span class="check_wo"><i class="wo"></i>请选择运营商</span>'
+					},
+			 		"qu" : {
+						required : '<span class="check_wo"><i class="wo"></i>请选择游戏区</span>'
+					},
+					"fu" : {
+						required : '<span class="check_wo"><i class="wo"></i>请选择游戏区</span>'
+					},
+					"qu" : {
+						required : '<span class="check_wo"><i class="wo"></i>请选择购买面值</span>'
+					},
+					"arg1" : {
+				 		required : '<span class="check_wo"><i class="wo"></i>请输入帐号</span>'
+				 	},
+					"arg2" : {
+						required : '<span class="check_wo"><i class="wo"></i>请选择服务器</span>'
+					},
+					"buyerpassword1" : {
+						required : '<span class="check_wo"><i class="wo"></i>请输入确认密码</span>',
+						equalTo : '<span class="check_wo"><i class="wo"></i>两次输入的密码不一致</span>'
+					},
+					"55" : {
+						required : '<span class="check_wo"><i class="wo"></i>请输入角色名</span>'
+					},
+					"goodsPurchaseBean.phone" : {
+						required : '<span class="check_wo"><i class="wo"></i>请输入手机号码</span>',
+						isTel : '<span class="check_wo"><i class="wo"></i>手机号码格式不正确</span>'
+					},
+					"goodsPurchaseBean.qq" : {
+						required : '<span class="check_wo"><i class="wo"></i>请输入QQ号码</span>',
+						isQQ : '<span class="check_wo"><i class="wo"></i>QQ号码格式不正确</span>'
+					}
+			 },
+			 errorPlacement: function(error , element){
+				element.parent().children("#error").html(error[0].innerHTML);
+			 },
+			 success: function(label){
+				label.parent().children("#error").html('');
+			 },
+			submitHandler: function(form) {
+				var info = [];
+				var rolename = $('#rolename').val();
+				var rolelevel = $('#rolelevel').val();
+				if(rolename==''){
+					rolename='角色为空'
+				}
+				if(rolelevel==''){
+					rolelevel='等级为空'
+				}
+				info.push({'rolename':rolename, 'rolelevel':rolelevel, 'stock':$('#stock').val()});
+				goodinfo =  BaseJs.Json.encode(info);
+				$('#goodsinfo').val(goodinfo);
+				//var account=$("#account").val();
+				//var carrierid=$("#carrierid").val();
+				//$.ajax({
+				///	type:'post',
+				///	data:{gameid:gameid,account:account,carrierid:carrierid},
+				//	url:'/procurement/validateFirstNo.action',
+				//	dataType:'json',
+				//	success:function(json) {
+				//		if(json.success=='N'){
+				//			popup("#pop");
+				//		}else{
+							form.submit(); 
+					//	}
+				///}
+				//});
+			}
+		});
+	
+	countMoney();
+	restrict_price_input($('#phone'));
+	restrict_price_input($('#qq'));
+});
+function formSubmit(){
+	$("#goodsForm").submit();
+}
+
+function popup(box,fn){
+		var _this = $(box);
+		var w = _this.outerWidth();
+		var h = _this.outerHeight();
+		var _dl = document.documentElement.scrollTop||document.body.scrollTop;
+		var l = Math.round((document.documentElement.clientWidth - w) / 2 + document.documentElement.scrollLeft);
+		var t = Math.round((document.documentElement.clientHeight - h) / 2 + _dl);
+		_this.css({"top":t,"left":l});
+		_this.find(".pop-box-bg").css({"width":w,"height":h});
+		var ch = document.documentElement.scrollHeight;
+		var cw = document.documentElement.scrollLeft+document.documentElement.clientWidth;
+		var cover = document.createElement("div");
+		cover.id = "cover";
+		cover.style.position = "absolute";
+		cover.style.top = "0px";
+		cover.style.left = "0px";
+		cover.style.width = cw+"px";
+		cover.style.height = ch + "px";
+		cover.style.zIndex = "999";
+		cover.style.filter = "alpha(opacity=0)";
+		cover.style.opacity = "0";
+		cover.style.display = "block";
+		cover.style.background = "#000";
+		cover.innerHTML = '<iframe id="if" name="if" style="position:absolute;top:-5px;left:0;border:none;width:100%;height:100%;background:#666666;filter:alpha(opacity=0);" ></iframe>';
+		document.body.appendChild(cover);
+		$("#cover").animate({opacity:0.3}, 200, function() {
+			_this.fadeIn(300);
+		})
+	$(window).resize(function(){
+		var ncw = document.documentElement.scrollLeft+document.documentElement.clientWidth;
+		$("#cover").width(ncw);
+	});
+}
+
+
+function setQuFu(){
+	var groupname = $("#qu>option:selected").text();
+	var servername = $("#fu>option:selected").text();
+	var carriername = $("#yys>option:selected").text();
+	$("#groupname").val(groupname);
+	$("#servername").val(servername);
+	$("#carrierid").val($("#yys").val());
+	$("#carriername").val(carriername);
+}
+
+var pernum=0;
+var goodsid='';
+var price=0.00;
+function selectGoodsFace(){
+	var gameid=$('#gameid').val();
+	var carriername = $("#yys>option:selected").text();
+	var carrierid = $("#yys").val();
+	var pid = $("#goodsface").val();
+    //var face = $("#goodsface").find("option:selected").text()
+    //$("#goodsface").find("option:selected").text()
+	if(pid!=''&&carrierid!=''){
+		//var goodstitle = '【'+carriername+'】'+face+'安卓版代充';
+		$.ajax({
+				type:'post',
+				data:{gameid:gameid,pid:pid,carrierid:carrierid},
+				url:'/procurement/getAndroidDcGoods.action',
+				dataType:'json',
+				success:function(json) {
+				if(json.success=='T'){
+					pernum = json.pernum;
+					goodsid=json.goodsid;
+					price=json.price;
+					$("#goodsid").val(goodsid);
+					$("#pernum").val(pernum);
+					countMoney();	
+					$("#goodstip").html('');
+					$("#submitLi").html('<a id="goodsForm" href="javascript:void(0);" onclick="formSubmit()"  class="btn btn-orange2">确认订单</a>');
+                    setBuyLimitTip();
+				}else if(json.success=='F'){
+					$("#submitLi").html('<a id="goodsForm" href="javascript:void(0);"   class="btn btn-disabled1">确认订单</a>');
+					$("#goodsid").val('');
+					$("#pernum").val(0);
+					$("#goodsprice").val(0);
+					$("#goodstip").html(carriername+'下暂无该面值可购买的商品');
+					$("#finalmoney").html(carriername+'下暂无该面值可购买的商品');
+                    var buylimit=$("#goodsface").find("option:selected").attr("buylimit");
+                    setBuyLimitTip();
+				}
+			}
+		});
+	}else if(pid==''){
+			$("#goodsid").val('');
+			$("#pernum").val('');
+			$("#finalmoney").html('0元');
+			$("#goodsprice").val('');
+			$("#goodstip").html('');
+        setBuyLimitTip();
+	}
+}
+function countMoney(){
+	if(goodsid!=''&&pernum>0&&price>0){
+		var num = $('#moneynum').val();
+		var money = parseFloat(num*price).toFixed(2);
+		$("#finalmoney").html(money+'元');
+		$("#goodsprice").val(money);
+		$("#stock").val(num*pernum);
+	}
+}
+
+if ('true' == 'false') {
+	alert('');
+}
+ 
+</script>
+</head>
+<body>
+
+
+<script type="text/javascript">
+	/// 判断是否登录
+	jQuery.ajax({
+		type : 'get',
+		url : '/loginCheckReturn.action?ip=' + Math.round(Math.random()*10000),
+		success : function(resultData) {
+			var result = resultData.split('#');
+			if(result[0] == '500')
+			{
+				location.href="/7881_touristlogin.jsp";
+			}
+			else if (result[0] == '200' && result.length > 2) {
+				 jQuery('#span_user').empty();
+				 if(result[2]!='0'){
+				 	htmlText = '<dt><a rel="nofollow" href="http://www.7881.com/personal.html">'+result[1]+'</a>，欢迎回来！</dt><dt class="top_grayline">|</dt><dt><a href="http://www.7881.com/msg/notReadMsg.action" rel="nofollow"><i class="ico_message_open">[' + result[2] + ']</i></a></dt><dt class="top_grayline">|</dt><dt><a href="/logout.action" rel="nofollow">退出</a></dt>';
+				 }else{
+				 	htmlText = '<dt><a rel="nofollow" href="http://www.7881.com/personal.html">'+result[1]+'</a>，欢迎回来！</dt><dt class="top_grayline">|</dt><dt><a href="http://www.7881.com/msg/notReadMsg.action" rel="nofollow"><i class="ico_message">[' + result[2] + ']</i></a></dt><dt class="top_grayline">|</dt><dt><a href="/logout.action" rel="nofollow">退出</a></dt>';
+				 }
+				 jQuery('#span_user').html(htmlText);
+			}else{
+				$(function(){
+					var url='http://www.7881.com/procurement/purchaseAppGoods.action';
+  				$('form').each(function(){
+  					var action=$(this).attr('action');
+  				  if(action&&action.length>=url.length&&action.substring(0,url.length)==url) {
+  					  $(this).attr('action', action.replace('http://www.7881.com', ''));
+  				  }
+  				});
+				});
+			}
+		}
+	});
+	document.domain="7881.com";
+</script>
+<script>
+  ga('create', 'UA-44365965-3', 'auto');
+  ga('send', 'pageview');
+</script>
+ 
+ 
+<script>
+var _hmt = _hmt || [];
+</script>
+<div class="header">
+   <div class="logo">&nbsp;</div>
+ <div class="logo_wri">王者荣耀充值商城</div>
+   <div class="Process right">
+<ul>
+<li>
+<p class="gray_a"></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="App_bj">
+<div class="W980 clearfix">
+<div class="App_left">
+<ul>
+<li><img src="./files/A2347.png" alt="" width="160" height="160"></li>
+<li class="pusht"><span class="f22 font_my">王者荣耀充值中心</span></li>
+
+<li><span class="f14">已累计为<em>16215612</em>位玩家成功充值</span></li>
+<li class="pusht"><span class="gray_a">充值完成后，请打开游戏</span></li>
+<li><span class="gray_a">邮件，领取点劵！</span></li>
+</ul>
+</div>
+<div class="fill_orders App_left App_right form">
+
+<form id="goodsForm" action="fukuan.html" method="post" novalidate="novalidate">
+	<p>&nbsp;</p>
+	<ul class="f14">
+				<li><label>充值点劵：<span class="red">*</span></label>
+					<select id="qu" name="qu" style="width:200px;height:32px;" size="1">
+					<option>选择点劵价格</option>
+					<option>超值12元588点劵</option>
+					<option>超值24元1588点劵</option>
+					<option>超值36元3288点劵</option>
+					<option>超值48元4888点劵</option>
+					<option>超值66元6888点劵</option>
+				</select><p class="tips" style="color:#f60;" id="goodstip"></p> </li>
+				 <li id="quLi"><label>游戏区：<span class="red">*</span></label>
+					<select id="fu" name="fu" style="width:200px;height:32px;" size="1">
+					<option value="">请选择</option>
+					<option value="A2347P001">QQ版（苹果）</option>
+					<option value="A2347P002">微信版（苹果）</option>
+					<option>QQ版（安卓）</option>
+					<option>微信版（安卓）</option>
+					</select>
+			    	&nbsp;<span id="error"></span></li>
+					<li id="fuLi"><label>服务器：<span class="red">*</span></label>
+					<select id="fu" name="arg2" style="width:200px;height:32px;">
+					  <option selected="" value="">选择区域</option> 
+					 <option>001服</option>
+			       <option>002服</option>
+				   <option>003服</option>
+				   <option>004服</option>
+			       <option>005服</option>
+				   <option>006服</option>
+				   <option>007服</option>
+			       <option>008服</option>
+				   <option>009服</option>
+				   <option>010服</option>
+			       <option>011服</option>
+				   <option>012服</option>
+				   <option>013服</option>
+			       <option>014服</option>
+				   <option>015服</option>
+				   <option>016服</option>
+			       <option>017服</option>
+				   <option>018服</option>
+				   <option>019服</option>
+			       <option>020服</option>
+				   <option>021服</option>
+				   <option>022服</option>
+			       <option>023服</option>
+				   <option>024服</option>
+				   <option>025服</option>
+			       <option>026服</option>
+				   <option>027服</option>
+				   <option>028服</option>
+			       <option>029服</option>
+				   <option>030服</option>
+				   <option>031服</option>
+			       <option>032服</option>
+				   <option>033服</option>
+				   <option>034服</option>
+			       <option>035服</option>
+				   <option>036服</option>
+				   <option>037服</option>
+				   <option>038服</option>
+			       <option>039服</option>
+				   <option>040服</option>
+				   <option>041服</option>
+			       <option>042服</option>
+				   <option>043服</option>
+				   <option>044服</option>
+			       <option>045服</option>
+				   <option>046服</option>
+				   <option>047服</option>
+			       <option>048服</option>
+				   <option>049服</option>
+				   <option>050服</option>
+			       <option>051服</option>
+				   <option>052服</option>
+				   <option>053服</option>
+			       <option>054服</option>
+				   <option>055服</option>
+				   <option>056服</option>
+			       <option>057服</option>
+				   <option>058服</option>
+				   <option>059服</option>
+			       <option>060服</option>
+				   <option>061服</option>
+				   <option>062服</option>
+			       <option>063服</option>
+				   <option>064服</option>
+				   <option>065服</option>
+			       <option>066服</option>
+				   <option>067服</option>
+				   <option>068服</option>
+			       <option>069服</option>
+				   <option>070服</option>
+				   <option>071服</option>
+			       <option>072服</option>
+				   <option>073服</option>
+				   <option>074服</option>
+			       <option>075服</option>
+				   <option>076服</option>
+				   <option>077服</option>
+			       <option>078服</option>
+				   <option>079服</option>
+				   <option>080服</option>
+			       <option>081服</option>
+				   <option>082服</option>
+				   <option>083服</option>
+			       <option>084服</option>
+				   <option>085服</option>
+				   <option>086服</option>
+			       <option>087服</option>
+				   <option>088服</option>
+				   <option>089服</option>
+			       <option>090服</option>
+				   <option>091服</option>
+				   <option>092服</option>
+			       <option>093服</option>
+				   <option>094服</option>
+				   <option>095服</option>
+			       <option>096服</option>
+				   <option>097服</option>
+				   <option>098服</option>
+				   <option>099服</option>
+				   <option>100服</option>
+				   <option>101服</option>
+				   <option>102服</option>
+				   <option>103服</option>
+				   <option>104服</option>
+				   <option>105服</option>
+				   <option>106服</option>
+				   <option>107服</option>
+				   <option>108服</option>
+				   <option>109服</option>
+				   <option>110服</option>
+				   <option>111服</option>
+				   <option>112服</option>
+				   <option>113服</option>
+				   <option>114服</option>
+				   <option>115服</option>
+				   <option>116服</option>
+				   <option>117服</option>
+				   <option>118服</option>
+				   <option>119服</option>
+				   <option>120服</option>
+				   <option>121服</option>
+				   <option>122服</option>
+				   <option>123服</option>
+				   <option>124服</option>
+				   <option>125服</option>
+				   <option>126服</option>
+				   <option>127服</option>
+				   <option>128服</option>
+				   <option>129服</option>
+				   <option>130服</option>
+				   <option>131服</option>
+				   <option>132服</option>
+				   <option>133服</option>
+				   <option>134服</option>
+				   <option>135服</option>
+				   <option>136服</option>
+				   <option>137服</option>
+				   <option>138服</option>
+				   <option>139服</option>
+				   <option>140服</option>
+				   <option>141服</option>
+				   <option>142服</option>
+				   <option>143服</option>
+				   <option>144服</option>
+				   <option>145服</option>
+				   <option>146服</option>
+				   <option>147服</option>
+				   <option>148服</option>
+				   <option>149服</option>
+				   <option>150服</option>
+				   <option>151服</option>
+				   <option>152服</option>
+				   <option>153服</option>
+				   <option>154服</option>
+				   <option>155服</option>
+				   <option>156服</option>
+				   <option>157服</option>
+				   <option>158服</option>
+				   <option>159服</option>
+				   <option>160服</option>
+				   <option>161服</option>
+				   <option>162服</option>
+				   <option>163服</option>
+				   <option>164服</option>
+				   <option>165服</option>
+				   <option>166服</option>
+				   <option>167服</option>
+				   <option>168服</option>
+				   <option>169服</option>
+				   <option>170服</option>
+				   <option>171服</option>
+				   <option>172服</option>
+				   <option>173服</option>
+				   <option>174服</option>
+				   <option>175服</option>
+				   <option>176服</option>
+				   <option>177服</option>
+				   <option>178服</option>
+				   <option>179服</option>
+				   <option>180服</option>
+				   <option>181服</option>
+				   <option>182服</option>
+				   <option>183服</option>
+				   <option>184服</option>
+				   <option>185服</option>
+				   <option>186服</option>
+				   <option>187服</option>
+				   <option>188服</option>
+				   <option>189服</option>
+				   <option>190服</option>
+				   <option>191服</option>
+				   <option>192服</option>
+				   <option>193服</option>
+				   <option>194服</option>
+				   <option>195服</option>
+				   <option>196服</option>
+				   <option>197服</option>
+				   <option>198服</option>
+				   <option>199服</option>
+				   <option>200服</option>
+				   <option>201服</option>
+				   <option>202服</option>
+				   <option>203服</option>
+				   <option>204服</option>
+				   <option>205服</option>
+				   <option>206服</option>
+				   <option>207服</option>
+				   <option>208服</option>
+				   <option>209服</option>
+				   <option>210服</option>
+				   <option>211服</option>
+				   <option>212服</option>
+				   <option>213服</option>
+				   <option>214服</option>
+				   <option>215服</option>
+				   <option>216服</option>
+				   <option>217服</option>
+				   <option>218服</option>
+				   <option>219服</option>
+				   <option>220服</option>
+				   <option>221服</option>
+				   <option>222服</option>
+				   <option>223服</option>
+				   <option>224服</option>
+				   <option>225服</option>
+				   <option>226服</option>
+				   <option>227服</option>
+				   <option>228服</option>
+				   <option>229服</option>
+				   <option>230服</option>
+				   <option>231服</option>
+				   <option>232服</option>
+				   <option>233服</option>
+				   <option>234服</option>
+				   <option>235服</option>
+				   <option>236服</option>
+				   <option>237服</option>
+				   <option>238服</option>
+				   <option>239服</option>
+				   <option>240服</option>
+				   <option>241服</option>
+				   <option>242服</option>
+				   <option>243服</option>
+				   <option>244服</option>
+				   <option>245服</option>
+				   <option>246服</option>
+				   <option>247服</option>
+				   <option>248服</option>
+				   <option>249服</option>
+				   <option>250服</option>
+				   <option>251服</option>
+				   <option>252服</option>
+				   <option>253服</option>
+				   <option>254服</option>
+				   <option>255服</option>
+				   <option>256服</option>
+				   <option>257服</option>
+				   <option>258服</option>
+				   <option>259服</option>
+				   <option>260服</option>
+				   <option>261服</option>
+				   <option>262服</option>
+				   <option>263服</option>
+				   <option>264服</option>
+				   <option>265服</option>
+				   <option>266服</option>
+				   <option>267服</option>
+				   <option>268服</option>
+				   <option>269服</option>
+				   <option>270服</option>
+				   <option>271服</option>
+				   <option>272服</option>
+				   <option>273服</option>
+				   <option>274服</option>
+				   <option>275服</option>
+				   <option>276服</option>
+				   <option>277服</option>
+				   <option>278服</option>
+				   <option>279服</option>
+				   <option>280服</option>
+				   <option>281服</option>
+				   <option>282服</option>
+				   <option>283服</option>
+				   <option>284服</option>
+				   <option>285服</option>
+				   <option>286服</option>
+				   <option>287服</option>
+				   <option>288服</option>
+				   <option>289服</option>
+				   <option>290服</option>
+				   <option>291服</option>
+				   <option>292服</option>
+				   <option>293服</option>
+				   <option>294服</option>
+				   <option>295服</option>
+				   <option>296服</option>
+				   <option>297服</option>
+				   <option>298服</option>
+				   <option>299服</option>
+				   <option>300服</option> 
+				         </select>
+
+			    	&nbsp;<span id="error"></span></li>
+					<li><label id="roleLb">微信或QQ帐号：<span class="red">*</span></label><input id="rolename" name="arg1" maxlength="50" type="text" class="text" value=""> &nbsp;<span id="error"></span></li>
+					
+					<li><label id="roleLb">角色名：<span class="red">*</span></label><input id="rolename" name="55" maxlength="50" type="text" class="text" value=""> &nbsp;<span id="error"></span></li>
+					<li id="goodsForm" class="label">
+					<input name="button" type="image" id="button" value="提交" src="./files/111111.jpg"></li>
+	</ul>
+</form>
+</div>
+</div>
+</div>
+
+<font color="red"><marquee direction="right">注意： 每个账号只能充值一次 感谢各位玩家的支持。</marquee></font>
+
+<div class="footer">
+    <div class="advan">
+	   <ul><li class="s1">寄售担保 无货保赔</li><li class="s2">安全服务 保障资金</li><li class="s3">7*24小时 专属客服</li><li class="s4">权威认证 安全可信</li></ul>
+	</div>
+	<div class="link">
+		&nbsp;<span><a href="fukuan.html">付款中心</a>|</span> 
+		<a href="http://www.7881.com/copyright.html" target="_blank" rel="nofollow">免责声明</a><span>|</span>
+		<a href="http://www.7881.com/hr.html" target="_blank" rel="nofollow">诚聘英才</a><span>|</span>
+		<a href="http://www.7881.com/ParentalControls.jsp" target="_blank" rel="nofollow">家长监护</a><span>|</span> 
+		<a href="http://www.7881.com/cooperation.html" target="_blank" rel="nofollow">商务合作</a><span>|</span>
+		<a href="http://www.7881.com/sitemap.html" target="_blank">网站地图</a><span>|</span>
+		<a href="http://www.7881.com/articlelist9-0-0.html" target="_blank">媒体声音</a>
+    </div>    
+	<div class="copyright gray_a font_a">Copyright ©2008-2016 王者荣耀版权所有&nbsp;&nbsp;ICP证：苏B1-20110004-4 (江苏猎宝网络科技有限公司) &nbsp;&nbsp;苏网文[2012]0671-031号</div>
+	
+	<ul class="honor">
+                <li><a target="_blank" class="s1" rel="nofollow"></a></li>
+		<li><a target="_blank" class="s2" rel="nofollow"></a></li>
+		<li><a target="_blank" class="s3" rel="nofollow"></a></li>
+		<li><a target="_blank" class="s4" rel="nofollow"></a></li>
+		<li><a target="_blank" class="s5" rel="nofollow"></a></li>
+                <li><a target="_blank" class="s6" rel="nofollow"></a></li>
+	</ul>
+</div>
+</body></html>
